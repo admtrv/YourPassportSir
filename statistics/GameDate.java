@@ -1,3 +1,5 @@
+package statistics;
+
 import java.time.LocalDate;
 
 public class GameDate {
