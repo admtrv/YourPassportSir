@@ -18,7 +18,7 @@ public class GameScore {
 
     // Выводит общий счет
     public void printTotalScore() {
-        System.out.println("You've earned: " + totalScore + " Eurodollars");
+        System.out.println("In total, you've earned: " + totalScore + " Eurodollars");
     }
 
 }

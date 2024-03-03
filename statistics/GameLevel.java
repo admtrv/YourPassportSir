@@ -23,7 +23,7 @@ public class GameLevel {
     public String getAccessRules() {
         return switch (level) {
             case 3 ->
-                    ("Rules of the day: Only citizens of the \"United Federation of Libertania\" with a valid passport will be admitted.");
+                    ("Rules of the day: Only citizens of the \"United Federation of Libertania\" with a valid passport and personal card will be admitted.");
             case 2 ->
                     ("Rules of the day: Entry is allowed for citizens of neighboring adjoining countries with a valid passport and visa.");
             case 1 ->

@@ -3,20 +3,27 @@ package objects;
 import java.time.LocalDate;
 
 public class Passport extends Document {
-    private String photo; // Пока-что путь к файлу фотографии
+    private String photo; // Возможно путь к файлу фотографии
     private LocalDate birthDate;
     private String country;
     private LocalDate expirationDate;
+    private String passportNumber;
 
-    public Passport(String firstName, String lastName, String passportNumber, LocalDate birthDate, String countryOfIssue, LocalDate expirationDate, String photo) {
-        super(firstName, lastName, passportNumber);
-        this.birthDate = birthDate;
-        this.country = countryOfIssue;
-        this.expirationDate = expirationDate;
+    public Passport(String firstName, String lastName, String passportNumber, LocalDate birthDate, String country, LocalDate expirationDate, String photo) {
+        super(firstName, lastName);
         this.photo = photo;
+        this.birthDate = birthDate;
+        this.country = country;
+        this.expirationDate = expirationDate;
+        this.passportNumber = passportNumber;
+
     }
 
-    // геттеры для objects.Passport
+    // Геттеры для Passport
+    public String getPhoto() {
+        return photo;
+    }
+
     public LocalDate getBirthDate() {
         return birthDate;
     }
@@ -29,7 +36,7 @@ public class Passport extends Document {
         return expirationDate;
     }
 
-    public String getPhoto() {
-        return photo;
+    public String getPassportNumber() {
+        return passportNumber;
     }
 }
