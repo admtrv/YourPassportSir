@@ -11,7 +11,7 @@ public class Citizen extends Visitor{
         this.personalCard = personalCard;
     }
 
-    public PersonalCard getParsonalCard() {
+    public PersonalCard getPersonalCard() {
         return personalCard;
     }
 }

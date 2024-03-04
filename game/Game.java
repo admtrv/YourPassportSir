@@ -6,6 +6,7 @@ import statistics.GameScore;
 
 import java.util.Timer;
 import java.util.TimerTask;
+
 public class Game {
     private GameLevel gameLevel;
     private GameDate gameDate;
@@ -16,7 +17,7 @@ public class Game {
         this.gameLevel = new GameLevel(); // Устанавливаем начальный уровень
         this.gameDate = new GameDate(1983, 10, 28); // Устанавливаем начальную дату
         this.gameScore = new GameScore(); // Инициализация счетчика очков
-        this.timeLimit = new Timer();
+        this.timeLimit = new Timer(); // Инициаизация таймера для ограничения игрового дня в 5 минут
     }
 
     private void startDay() {
