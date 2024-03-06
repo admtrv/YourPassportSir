@@ -1,13 +1,12 @@
 package characters;
 
-import objects.Passport;
-import objects.PersonalCard;
+import objects.*;
 public class Citizen extends Visitor{
 
     private PersonalCard personalCard;
 
-    public Citizen(String firstName, String lastName, Passport passport, PersonalCard personalCard) {
-        super(firstName, lastName, passport);
+    public Citizen(String firstName, String lastName, Passport passport, PersonalCard personalCard, boolean isDocumentValid) {
+        super(firstName, lastName, passport, isDocumentValid);
         this.personalCard = personalCard;
     }
 

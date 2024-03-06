@@ -1,5 +1,6 @@
 package statistics;
 
+import characters.*;
 public class GameLevel {
     private int level;
 
@@ -31,4 +32,20 @@ public class GameLevel {
             default -> ("Error!");
         };
     }
+
+    public boolean checkLevel(Visitor visitor) {
+        return switch (level) {
+            case 3 ->
+                // Для 3 уровня допускаются только граждане UFL
+                    visitor instanceof Citizen;
+            case 2 ->
+                // Для 2 уровня допускаются граждане Berkestan или Vielfraschland
+                    visitor instanceof Foreigner && (visitor.getPassport().getCountry().equals("Berkestan") || visitor.getPassport().getCountry().equals("Vielfraschland"));
+            case 1 ->
+                // Для 1 уровня допускаются все посетители
+                    true;
+            default -> false;
+        };
+    }
+
 }

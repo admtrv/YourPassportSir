@@ -1,16 +1,16 @@
 package characters;
 
-import objects.Passport;
-
+import objects.*;
 public abstract class Visitor {
     protected String firstName;
     protected String lastName;
     protected Passport passport;
-
-    public Visitor(String firstName, String lastName, Passport passport) {
+    protected boolean isDocumentValid;
+    public Visitor(String firstName, String lastName, Passport passport, boolean isDocumentValid) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.passport = passport;
+        this.isDocumentValid = isDocumentValid;
     }
 
     // Общие геттеры для всех Посетителей
@@ -24,5 +24,9 @@ public abstract class Visitor {
 
     public Passport getPassport() {
         return passport;
+    }
+
+    public boolean checkDocumentValid() {
+        return isDocumentValid;
     }
 }

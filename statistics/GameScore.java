@@ -9,6 +9,8 @@ public class GameScore {
         dailyScore += points;
     }
 
+    public void subtractPoints(int points) {dailyScore -= points;}
+
     // Выводит и добавляет счет за день к общему счету, затем сбрасывает счет за день
     public void endDay() {
         System.out.println("You've earned: " + dailyScore + " Eurodollars");
