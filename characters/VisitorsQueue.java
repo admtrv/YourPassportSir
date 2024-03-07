@@ -3,40 +3,57 @@ package characters;
 import objects.*;
 
 import java.time.LocalDate;
+import java.util.Collections;
 import java.util.List;
 import java.util.ArrayList;
+import java.io.BufferedReader;
+import java.io.FileReader;
 
 public class VisitorsQueue {
     private List<Visitor> visitorsQueue = new ArrayList<>();
     private final int maxVisitorsPerDay = 5;
+
     public VisitorsQueue() {
-        generateQueue();
+        parseFile("characters/parse/сitizens.csv", true); // true для жителей
+        parseFile("characters/parse/foreigners.csv", false); // false для заграничных посетителей
+        Collections.shuffle(visitorsQueue); // Перемешиваем список после добавления всех посетителей
     }
 
-    private void generateQueue() {
-        // Граждане United Federation of Libertania (UFL)
-        visitorsQueue.add(new Citizen("John", "Doe", new Passport("John", "Doe", "UFL001", LocalDate.of(1990, 4, 1), "United Federation of Libertania", LocalDate.of(2030, 4, 1), "photoPath1"), new PersonalCard("John", "Doe", LocalDate.of(1990, 4, 1), 180, 80, "photoPath1"),true));
-        visitorsQueue.add(new Citizen("Alice", "Doe", new Passport("Alice", "Doe", "UFL002", LocalDate.of(1992, 7, 24), "United Federation of Libertania", LocalDate.of(2032, 7, 24), "photoPath2"), new PersonalCard("Alice", "Doe", LocalDate.of(1992, 7, 24), 165, 60, "photoPath2"),true));
-
-        // Berkestan
-        visitorsQueue.add(new Foreigner("Aidar", "Nazarbayev", new Passport("Aidar", "Nazarbayev", "BER001", LocalDate.of(1988, 1, 15), "Berkestan", LocalDate.of(2028, 1, 15), "photoPath3"), new Visa("Aidar", "Nazarbayev", "BER001", LocalDate.of(2023, 12, 31)),true));
-        visitorsQueue.add(new Foreigner("Dana", "Kerey", new Passport("Dana", "Kerey", "BER002", LocalDate.of(1994, 11, 5), "Berkestan", LocalDate.of(2024, 11, 5), "photoPath4"), new Visa("Dana", "Kerey", "BER002", LocalDate.of(2023, 12, 31)),true));
-
-        // Volgaria
-        visitorsQueue.add(new Foreigner("Ivan", "Petrov", new Passport("Ivan", "Petrov", "VOL001", LocalDate.of(1986, 5, 22), "Volgaria", LocalDate.of(2026, 5, 22), "photoPath5"), new Visa("Ivan", "Petrov", "VOL001", LocalDate.of(2023, 12, 31)),true));
-        visitorsQueue.add(new Foreigner("Olga", "Sidorova", new Passport("Olga", "Sidorova", "VOL002", LocalDate.of(1990, 3, 18), "Volgaria", LocalDate.of(2030, 3, 18), "photoPath6"), new Visa("Olga", "Sidorova", "VOL002", LocalDate.of(2023, 12, 31)),true));
-
-        // Miong Gu
-        visitorsQueue.add(new Foreigner("Li", "Wang", new Passport("Li", "Wang", "MIO001", LocalDate.of(1979, 9, 29), "Miong Gu", LocalDate.of(2029, 9, 29), "photoPath7"), new Visa("Li", "Wang", "MIO001", LocalDate.of(2023, 12, 31)),true));
-        visitorsQueue.add(new Foreigner("Chen", "Yu", new Passport("Chen", "Yu", "MIO002", LocalDate.of(1983, 2, 14), "Miong Gu", LocalDate.of(2033, 2, 14), "photoPath8"), new Visa("Chen", "Yu", "MIO002", LocalDate.of(2023, 12, 31)),true));
-
-        // Vielfraschland
-        visitorsQueue.add(new Foreigner("Hans", "Muller", new Passport("Hans", "Müller", "VIE001", LocalDate.of(1975, 6, 3), "Vielfraschland", LocalDate.of(2025, 6, 3), "photoPath9"), new Visa("Hans", "Müller", "VIE001", LocalDate.of(2023, 12, 31)),true));
-        visitorsQueue.add(new Foreigner("Anna", "Schmidt", new Passport("Anna", "Schmidt", "VIE002", LocalDate.of(1988, 12, 21), "Vielfraschland", LocalDate.of(2028, 12, 21), "photoPath10"), new Visa("Anna", "Schmidt", "VIE002", LocalDate.of(2023, 12, 31)),true));
+    private void parseFile(String filePath, boolean isCitizen) {
+        try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+            br.readLine();
+            String line;
+            while ((line = br.readLine()) != null) {
+                String[] data = line.split(",");
+                if (isCitizen) {
+                    // Создание объекта Citizen из строки файла
+                    Citizen citizen = new Citizen(
+                            data[0],
+                            data[1],
+                            new Passport(data[2], data[3], data[4], LocalDate.parse(data[5]), data[6], LocalDate.parse(data[7]), data[8], data[9]),
+                            new IdentityCard(data[10], data[11], LocalDate.parse(data[12]), Integer.parseInt(data[13]), Integer.parseInt(data[14]), data[15]),
+                            Boolean.parseBoolean(data[16])
+                    );
+                    visitorsQueue.add(citizen);
+                } else {
+                    // Создание объекта Foreigner из строки файла
+                    Foreigner foreigner = new Foreigner(
+                            data[0],
+                            data[1],
+                            new Passport(data[2], data[3], data[4], LocalDate.parse(data[5]), data[6], LocalDate.parse(data[7]), data[8], data[9]),
+                            new Visa(data[10], data[11], data[12], LocalDate.parse(data[13])),
+                            Boolean.parseBoolean(data[14])
+                    );
+                    visitorsQueue.add(foreigner);
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
-    public ArrayList<Visitor> getVisitorsQueue() {
-        return new ArrayList<>(visitorsQueue);
+    public List<Visitor> getVisitorsQueue() {
+        return visitorsQueue;
     }
 
     public int getMaxVisitorsPerDay() {

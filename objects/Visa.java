@@ -20,4 +20,18 @@ public class Visa extends Document {
     public String getPassportNumber() {
         return passportNumber;
     }
+
+
+    public void displayVisa() {
+        System.out.println("---Visa---");
+        System.out.println("Entry to the");
+        System.out.println("United Federation of Libertania");
+        System.out.println("is hereby granted to:");
+        System.out.println(lastName + " " + firstName);
+        System.out.println("bearing passport number:");
+        System.out.println(passportNumber);
+        System.out.println("Enter by: " + entranceDate);
+        System.out.println("----------");
+    }
+
 }

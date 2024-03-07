@@ -1,0 +1,11 @@
+firstName,lastName,passportFirstName,passportLastName,passportNumber,birthDate,country,expirationDate,passportPhoto,sex,identityCardFirstName,identityCardLastName,identityCardBirthDate,height,weight,identityCardPhoto,isDocumentValid
+John,Doe,John,Doe,UFL1X01Z75,1975-04-12,United Federation of Libertania,1989-10-28,passport photo,M,John,Doe,1975-04-12,180,75,identity photo,true
+Jane,Smith,Jane,Smith,UFL2X02Z78,1978-05-22,United Federation of Libertania,1991-10-28,passport photo,F,Jane,Smith,1978-05-22,165,60,identity photo,true
+Michael,Johnson,Michael,Johnson,UFL3X03Z70,1970-07-08,United Federation of Libertania,1990-10-28,passport photo,M,Michael,Johnson,1970-07-08,175,85,identity photo,true
+Emily,Williams,Emily,Williams,UFL4X04Z72,1972-09-14,United Federation of Libertania,1988-10-28,passport photo,F,Emily,Williams,1972-09-14,170,65,identity photo,true
+David,Brown,David,Brown,UFL5X05Z74,1974-11-05,United Federation of Libertania,1992-10-28,passport photo,M,David,Brown,1974-11-05,182,80,identity photo,true
+Olivia,Jones,Olivia,Jones,UFL6X06Z76,1976-12-17,United Federation of Libertania,1993-10-28,passport photo,F,Olivia,Jones,1976-12-17,168,58,identity photo,true
+William,Garcia,William,Garcia,UFL7X07Z69,1969-02-23,United Federation of Libertania,1988-10-28,passport photo,M,William,Garcia,1969-02-23,185,90,identity photo,true
+Ava,Martinez,Ava,Martinez,UFL8X08Z77,1977-03-30,United Federation of Libertania,1991-10-28,passport photo,F,Ava,Martinez,1977-03-30,162,55,identity photo,true
+James,Rodriguez,James,Rodriguez,UFL9X09Z71,1971-06-04,United Federation of Libertania,1990-10-28,passport photo,M,James,Rodriguez,1971-06-04,178,88,identity photo,true
+Sophia,Lopez,Sophia,Lopez,UFL0X10Z73,1973-08-12,United Federation of Libertania,1989-10-28,passport photo,F,Sophia,Lopez,1973-08-12,174,63,identity photo,true

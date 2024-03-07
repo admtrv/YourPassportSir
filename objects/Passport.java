@@ -8,14 +8,15 @@ public class Passport extends Document {
     private String country;
     private LocalDate expirationDate;
     private String passportNumber;
-
-    public Passport(String firstName, String lastName, String passportNumber, LocalDate birthDate, String country, LocalDate expirationDate, String photo) {
+    private String sex;
+    public Passport(String firstName, String lastName, String passportNumber, LocalDate birthDate, String country, LocalDate expirationDate, String photo,String sex) {
         super(firstName, lastName);
         this.photo = photo;
         this.birthDate = birthDate;
         this.country = country;
         this.expirationDate = expirationDate;
         this.passportNumber = passportNumber;
+        this.sex = sex;
 
     }
 
@@ -38,5 +39,15 @@ public class Passport extends Document {
 
     public String getPassportNumber() {
         return passportNumber;
+    }
+
+    public void displayPassport() {
+        System.out.println("---Passport---");
+        System.out.println("*" + photo + "* " + firstName + ", " + lastName);
+        System.out.println("DOB. " + birthDate);
+        System.out.println("SEX. " + sex);
+        System.out.println("IC. " + country);
+        System.out.println("EXP. " + expirationDate);
+        System.out.println("---" + passportNumber + "---");
     }
 }

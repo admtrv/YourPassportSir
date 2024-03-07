@@ -4,7 +4,10 @@ import statistics.*;
 import characters.*;
 import player.*;
 
+import java.util.Scanner;
+
 public class Game {
+    private Scanner scanner;
     private GameLevel gameLevel;
     private GameDate gameDate;
     private GameScore gameScore;
@@ -14,6 +17,7 @@ public class Game {
     int correctDecisions = 0;
 
     public Game() {
+        this.scanner = new Scanner(System.in);
         this.gameLevel = new GameLevel();
         this.gameDate = new GameDate(1983, 10, 28);
         this.gameScore = new GameScore();
@@ -74,7 +78,11 @@ public class Game {
 
         if (currentVisitor < visitorsQueue.getVisitorsQueue().size()) {
             gameScore.endDay();
-            startDay();
+            System.out.println("Moving on to the next day? (yes/no)");
+            String decision = scanner.nextLine();
+            if (decision.equalsIgnoreCase("yes")) {
+                startDay();
+            }
         } else {
             System.out.println("Good job, officer! You've checked the entire visitor's queue");
             gameScore.printTotalScore();

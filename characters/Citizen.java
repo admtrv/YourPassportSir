@@ -3,14 +3,14 @@ package characters;
 import objects.*;
 public class Citizen extends Visitor{
 
-    private PersonalCard personalCard;
+    private IdentityCard identityCard;
 
-    public Citizen(String firstName, String lastName, Passport passport, PersonalCard personalCard, boolean isDocumentValid) {
+    public Citizen(String firstName, String lastName, Passport passport, IdentityCard identityCard, boolean isDocumentValid) {
         super(firstName, lastName, passport, isDocumentValid);
-        this.personalCard = personalCard;
+        this.identityCard = identityCard;
     }
 
-    public PersonalCard getPersonalCard() {
-        return personalCard;
+    public IdentityCard getIdentityCard() {
+        return identityCard;
     }
 }

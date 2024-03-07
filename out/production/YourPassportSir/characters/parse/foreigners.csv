@@ -1,0 +1,21 @@
+firstName,lastName,passportFirstName,passportLastName,passportNumber,birthDate,country,expirationDate,passportPhoto,sex,visaFirstName,visaLastName,visaPassportNumber,entranceDate,visaPhoto,isDocumentValid
+Aidar,Nazarbayev,Aidar,Nazarbayev,BER-9801-AX,1975-04-12,Berkestan,1993-10-28,passport photo,M,Aidar,Nazarbayev,BER-9801-AX,1983-06-01,visa photo,true
+Dana,Kerey,Dana,Kerey,BER-9802-BX,1978-05-22,Berkestan,1994-10-28,passport photo,F,Dana,Kerey,BER-9802-BX,1983-06-02,visa photo,true
+Kanat,Toktar,Kanat,Toktar,BER-9803-CX,1970-07-08,Berkestan,1991-10-28,passport photo,M,Kanat,Toktar,BER-9803-CX,1983-06-03,visa photo,true
+Gulnara,Satova,Gulnara,Satova,BER-9804-DX,1972-09-14,Berkestan,1992-10-28,passport photo,F,Gulnara,Satova,BER-9804-DX,1983-06-04,visa photo,true
+Bekzat,Aliev,Bekzat,Aliev,BER-9805-EX,1974-11-05,Berkestan,1995-10-28,passport photo,M,Bekzat,Aliev,BER-9805-EX,1983-06-05,visa photo,true
+Ivan,Petrov,Ivan,Petrov,VOL12345V,1976-12-17,Volgaria,1988-10-28,passport photo,M,Ivan,Petrov,VOL12345V,1983-07-01,visa photo,true
+Olga,Sidorova,Olga,Sidorova,VOL12346V,1969-02-23,Volgaria,1990-10-28,passport photo,F,Olga,Sidorova,VOL12346V,1983-07-02,visa photo,true
+Alexey,Ivanov,Alexey,Ivanov,VOL12347V,1977-03-30,Volgaria,1989-10-28,passport photo,M,Alexey,Ivanov,VOL12347V,1983-07-03,visa photo,true
+Maria,Fedotova,Maria,Fedotova,VOL12348V,1971-06-04,Volgaria,1991-10-28,passport photo,F,Maria,Fedotova,VOL12348V,1983-07-04,visa photo,true
+Dmitry,Novikov,Dmitry,Novikov,VOL12349V,1973-08-12,Volgaria,1992-10-28,passport photo,M,Dmitry,Novikov,VOL12349V,1983-07-05,visa photo,true
+Li,Wang,Li,Wang,MGU-7890LW,1979-09-29,Miong Gu,1993-09-29,passport photo,M,Li,Wang,MGU-7890LW,1983-10-28,visa photo,true
+Chen,Yu,Chen,Yu,MGU-8910CY,1983-02-14,Miong Gu,1991-02-14,passport photo,M,Chen,Yu,MGU-8910CY,1983-10-28,visa photo,true
+Hao,Lin,Hao,Lin,MGU-2345HL,1970-07-08,Miong Gu,1989-07-08,passport photo,F,Hao,Lin,MGU-2345HL,1983-10-28,visa photo,true
+Mei,Feng,Mei,Feng,MGU-3456MF,1986-05-22,Miong Gu,1995-05-22,passport photo,F,Mei,Feng,MGU-3456MF,1983-10-28,visa photo,true
+Zhang,Wei,Zhang,Wei,MGU-4567ZW,1975-04-12,Miong Gu,1994-04-12,passport photo,M,Zhang,Wei,MGU4567ZW,1983-10-28,visa photo,true
+Hans,Müller,Hans,Müller,VFL-ABCD-1234,1975-06-03,Vielfraschland,1993-06-03,passport photo,M,Hans,Müller,VFL-ABCD-1234,1983-10-28,visa photo,true
+Anna,Schmidt,Anna,Schmidt,VFL-EFGH-5678,1988-12-21,Vielfraschland,1990-12-21,passport photo,F,Anna,Schmidt,VFL-EFGH-5678,1983-10-28,visa photo,true
+Johann,Weber,Johann,Weber,VFL-IJKL-9101,1979-09-29,Vielfraschland,1998-09-29,passport photo,M,Johann,Weber,VFL-IJKL-9101,1983-10-28,visa photo,true
+Marie,Krause,Marie,Krause,VFL-MNOP-1112,1983-02-14,Vielfraschland,1992-02-14,passport photo,F,Marie,Krause,VFL-MNOP-1112,1983-10-28,visa photo,true
+Felix,Becker,Felix,Becker,VFL-QRST-2223,1970-07-08,Vielfraschland,1991-07-08,passport photo,M,Felix,Becker,VFL-QRST-2223,1983-10-28,visa photo,true
